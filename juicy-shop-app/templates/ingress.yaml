@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: juicy-shop-app-ingress
+  namespace: monitoring
+  # annotations:
+  #   kubernetes.io/ingress.class: "nginx"
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - adam-monitoring.zapto.org
+    secretName: juicy-shop-app-tls
+  rules:
+    - host: adam-monitoring.zapto.org
+      http:
+        paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: juicy-shop-app-juice-shop
+              port:
+                number: 3000

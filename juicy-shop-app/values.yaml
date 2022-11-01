@@ -1,0 +1,20 @@
+# juice-shop:
+#   ingress:
+#     enabled: true
+#     annotations:
+#       kubernetes.io/ingress.class: "nginx"
+#       kubernetes.io/tls-acme: "true"
+#     hosts:
+#       - host: adam-monitoring.zapto.org
+#         paths:
+#         - path: /*
+#           pathType: Prefix
+#           backend:
+#             service:
+#               name: juicy-shop-app-juice-shop
+#               port:
+#                 number: 3000
+#     tls:
+#     - hosts:
+#       - adam-monitoring.zapto.org
+#       secretName: juicy-shop-tls

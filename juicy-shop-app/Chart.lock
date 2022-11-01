@@ -1,0 +1,6 @@
+dependencies:
+- name: juice-shop
+  repository: ""
+  version: 3.15.0
+digest: sha256:257549df22d68359b499a7cb9852a11693c3b1d07ddaf6fee7f81db7267f5539
+generated: "2022-11-01T06:36:31.46711709+01:00"
